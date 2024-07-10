@@ -1,0 +1,20 @@
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+    width: 90%;
+    margin: 2rem auto;
+    /* margin-bottom: 1rem; */
+    /* padding: 2rem; */
+    /* gap: 16px;  */
+}
+.card{
+    box-shadow: var(--shadow);
+    min-width: 400px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    /* margin: 2rem; */ 
+    flex:1;
+} 
