@@ -1,0 +1,58 @@
+.tp{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+.first_row{
+    display: flex;
+    justify-content: space-between;
+    gap:0.5rem;
+}
+.input-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:0.5rem;
+    width: 100%;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    /* background-color: black; */
+}
+
+.input-flex img{
+    width: 22px;
+    height: 22px;
+}
+.input-flex input{
+    width: 100%;
+    padding: 0rem;
+    border: 0;
+    outline: none;
+}
+
+.select-input{
+    width: 20%;
+    height: 100%;
+    margin-right: 10;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    height: 100%;
+    border:0px solid white;
+}
+.select-input > div{
+    border:0px solid white;
+}
+.second_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.csv-btn-div{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}

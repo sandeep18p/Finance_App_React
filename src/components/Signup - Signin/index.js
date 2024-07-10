@@ -1,6 +1,6 @@
 import react, { useState } from "react";
 import "./styles.css"
-import Input from "../header/Input";
+import Input from "../Input/index.jsx";
 import { toast } from "react-toastify";
 import Button from "../Button/index.jsx";
 import {
