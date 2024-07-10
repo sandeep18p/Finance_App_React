@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/header/header";
 import SigninSignup from "../components/Signup - Signin";
-// import styles from "./styles.css"
+import "../App.css"
 
 const Signup =()=>{
     return(<>

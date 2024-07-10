@@ -1,12 +1,19 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 .blue-text {
   color: var(--theme);
 }
-.wrapper {
+.wrapper{
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100vw;
+  justify-content: center;
+  width: 100%;
   height: 90vh;
+  overflow: auto;
 }
 .signup-signin-container {
   width: 30vw;
