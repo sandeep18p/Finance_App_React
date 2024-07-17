@@ -5,7 +5,7 @@ import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
-// import userImg from '../../assets/user.jpg'
+import userImg from '../../assets/user.svg'
 
 
 
@@ -34,7 +34,7 @@ const Header =()=>{
      <div className="navbar">
      <p className="logo">Financely</p>
      {user && (<div className="logo_div">
-        {/* <img src={user.photoURL ? user.photoURL:userImg} alt="" /> */}
+        <img src={user.photoURL ? user.photoURL:userImg} alt="" />
         <p onClick={logout} className="link">
           Logout
         </p>
