@@ -11,6 +11,23 @@ const TransactionsTable = ({ transactions,getTransactions,addTransaction})=>{
     const [typeFilter, setTypeFilter] = useState("");
     const [sortKey, setSortKey] = useState("");
 
+    function exportCsv() {
+      let csv = unparse({
+        fields: ["name", "amount", "type", "tag", "date"],
+        data: [...transactions],
+      }); 
+      var blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      var csvURL = window.URL.createObjectURL(blob);
+      let tempLink = document.createElement("a");
+      tempLink.href = csvURL;
+      tempLink.download = "transactions.csv";
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+
+
+    }
+
     const columns = [
         {
           title: "Name",
@@ -68,8 +85,9 @@ const TransactionsTable = ({ transactions,getTransactions,addTransaction})=>{
                 console.log("Transactions", transaction);
                 const newTransaction = {
                   ...transaction,
-                  amount: parseInt(transaction.amount),
+                  amount: parseFloat(transaction.amount),
                 };
+                console.log("new Transactions", newTransaction)
                 await addTransaction(newTransaction, true);
               }
             },
@@ -153,7 +171,7 @@ const TransactionsTable = ({ transactions,getTransactions,addTransaction})=>{
             }}
           >
             <button className="btn"  
-            // onClick={exportToCsv}
+            onClick={exportCsv}
             >
               Export to CSV
             </button>

@@ -1,0 +1,17 @@
+.graphs_div{
+    /* display: flex;
+    justify-content: space-between;
+    gap:1rem; */
+}
+.graphs_div > div:nth-child(1){
+    /* flex:2; */
+    box-shadow: var(--shadow);
+    padding:1rem;
+    border-radius: 1rem;
+}
+.graphs_div > div:nth-child(2){
+   /* flex:1; */
+    box-shadow: var(--shadow);
+    padding:1rem;
+    border-radius: 1rem;
+}

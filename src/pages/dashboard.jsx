@@ -7,8 +7,10 @@ import AddExpenseModal from "../components/Modals/AddExpense";
 import AddIncomeModal from "../components/Modals/AddIncome";
 import moment from "moment";
 import { toast } from "react-toastify";
+import no_transaction_img from '../assets/transactions.svg'
 import { addDoc, collection, getDocs, query } from "firebase/firestore";
 import TransactionsTable from "../components/TransactionsTable";
+import Charts from "../components/Charts";
 
 const Dashboard =()=>{
     const [user] = useAuthState(auth);
@@ -120,6 +122,22 @@ const Dashboard =()=>{
             expense={expense}
             balance={balance}
             ></Cards>
+           
+           {transactions && transactions.length != 0 ? (
+  <Charts transactions={transactions} />
+) : (
+  <>
+   <img
+    src={no_transaction_img}
+    alt="img"
+    style={{ display: 'block', margin: '0 auto' }}
+  />
+  <p style={{ textAlign:"center" }}>No Transactions is made </p>
+  </>
+ 
+ 
+)}
+
             <AddExpenseModal
             isExpenseModalVisible={isExpenseModalVisible}
             handleExpenseCancel={handleExpenseCancel}
