@@ -45,6 +45,7 @@ const SigninSignup = () => {
           // ...
         })
         .catch((error) => {
+          console.log("comming");
           const errorCode = error.code;
           const errorMessage = error.message;
           toast.error(error.message);
